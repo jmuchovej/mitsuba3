@@ -33,7 +33,7 @@ jobs:
 
     name: >
       ${{ matrix.python }} wheel for ${{ matrix.os }}
-      ${{ (matrix.os == 'macos-latest' && format('({0})', matrix.cibw-arch)) || '' }}
+      ${{ (matrix.os != 'windows-latest' && format('({0})', matrix.cibw-arch)) || '' }}
     runs-on: ${{ matrix.os }}
 
     steps:

@@ -27,8 +27,6 @@ jobs:
         python: [cp38, cp39, cp310, cp311]
         cibw-arch: [x86_64, arm64]
         exclude:
-          - os: ubuntu-20.04
-            cibw-arch: arm64
           - os: windows-latest
             cibw-arch: arm64
       fail-fast: false
